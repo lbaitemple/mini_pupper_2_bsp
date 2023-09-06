@@ -82,7 +82,7 @@ sudo git config --global --add safe.directory $BASEDIR # temporary fix https://b
 
 PYTHONMODLE=Python_Module
 
-sudo pip install $BASEDIR/$PYTHONMODLE
+pip install $BASEDIR/$PYTHONMODLE
 
 
 
