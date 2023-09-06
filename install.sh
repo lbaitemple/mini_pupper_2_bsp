@@ -79,18 +79,10 @@ sudo pip install sounddevice soundfile
 ### Install Python module
 sudo apt install -y python3-dev
 sudo git config --global --add safe.directory $BASEDIR # temporary fix https://bugs.launchpad.net/devstack/+bug/1968798
-if [ "$MACHINE" == "x86_64" ]
-then
-    PYTHONMODLE=mock_api
-else
-    PYTHONMODLE=Python_Module
-fi
-if [ "$IS_RELEASE" == "YES" ]
-then
-    sudo PBR_VERSION=$(cd $BASEDIR; ./get-version.sh) pip install $BASEDIR/$PYTHONMODLE
-else
-    sudo pip install $BASEDIR/$PYTHONMODLE
-fi
+
+PYTHONMODLE=Python_Module
+
+sudo pip install $BASEDIR/$PYTHONMODLE
 
 
 
