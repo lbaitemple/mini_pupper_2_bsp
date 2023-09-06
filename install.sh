@@ -12,14 +12,7 @@ BASEDIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 echo BUILD_DATE=\"$(date)\" > ~/mini-pupper-release
 echo HARDWARE=\"$(python3 $BASEDIR/Python_Module/MangDang/mini_pupper/capabilities.py)\" >> ~/mini-pupper-release
 echo MACHINE=\"$(uname -m)\" >> ~/mini-pupper-release
-if [ -f /boot/firmware/user-data ]
-then
-    echo CLOUD_INIT_CLONE=\"$(grep clone /boot/firmware/user-data | awk -F'"' '{print $2}')\" >> ~/mini-pupper-release
-    echo CLOUD_INIT_SCRIPT=\"$(grep setup_out /boot/firmware/user-data | awk -F'"' '{print $2}')\" >> ~/mini-pupper-release
-else
- #   echo BUILD_SCRIPT=\"$(cd ~; ls *build.sh)\" >> ~/mini-pupper-release
-    echo "okay"
-fi
+
 #echo BSP_VERSION=\"$(cd ~/mini_pupper_bsp; ./get-version.sh)\" >> ~/mini-pupper-release
 #cd ~/mini_pupper_bsp
 #TAG_COMMIT=$(git rev-list --abbrev-commit --tags --max-count=1)
