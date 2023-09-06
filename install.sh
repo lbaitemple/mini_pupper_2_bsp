@@ -92,13 +92,7 @@ else
     sudo pip install $BASEDIR/$PYTHONMODLE
 fi
 
-# Install Camera
-MACHINE=$(uname -m)
-if [ "$MACHINE" != "x86_64" ]
-# install script will break virtual installation
-then
-~/mini_pupper_bsp/RPiCamera/install.sh
-fi
+
 
 ### Make pwm sysfs and nvmem work for non-root users
 ### reference: https://github.com/raspberrypi/linux/issues/1983
