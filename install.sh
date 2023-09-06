@@ -46,8 +46,8 @@ tmp=$(ps aux | grep unattended-upgrade | grep -v unattended-upgrade-shutdown | g
 done
 
 ### Give a meaningfull hostname
-grep -q "mini_pupper_v2" /etc/hostname || echo "mini_pupper_v2" | sudo tee /etc/hostname
-grep -q "mini_pupper_v2" /etc/hosts || echo "127.0.0.1	mini_pupper_v2" | sudo tee -a /etc/hosts
+#grep -q "mini_pupper_v2" /etc/hostname || echo "mini_pupper_v2" | sudo tee /etc/hostname
+#grep -q "mini_pupper_v2" /etc/hosts || echo "127.0.0.1	mini_pupper_v2" | sudo tee -a /etc/hosts
 
 
 ### upgrade Ubuntu and install required packages
