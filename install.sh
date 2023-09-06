@@ -69,7 +69,7 @@ sudo cp -r $BASEDIR/Display /var/lib/mini_pupper_bsp
 #$BASEDIR/prepare_dkms.sh
 
 #COMPONENTS=(IO_Configuration FuelGauge System esp32_proxy rpi-i2s-audio)
-COMPONENTS=(IO_Configuration FuelGauge System esp32_proxy )
+COMPONENTS=(IO_Configuration  esp32_proxy )
 
 for dir in ${COMPONENTS[@]}; do
     cd $BASEDIR/$dir
