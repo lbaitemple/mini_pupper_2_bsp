@@ -66,12 +66,9 @@ sudo cp -r $BASEDIR/Display /var/lib/mini_pupper_bsp
 
 ### Install system components
 $BASEDIR/prepare_dkms.sh
-if [ "$MACHINE" == "x86_64" ]
-then
-    COMPONENTS=(FuelGauge System esp32_proxy rpi-i2s-audio)
-else
-    COMPONENTS=(IO_Configuration FuelGauge System esp32_proxy rpi-i2s-audio)
-fi
+
+COMPONENTS=(IO_Configuration FuelGauge System esp32_proxy rpi-i2s-audio)
+
 for dir in ${COMPONENTS[@]}; do
     cd $BASEDIR/$dir
     ./install.sh
